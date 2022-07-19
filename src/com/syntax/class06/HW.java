@@ -12,16 +12,24 @@ click on each button and handle the alert accordingly*/
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://syntaxprojects.com/javascript-alert-box-demo.php");
-        driver.findElement(By.xpath("//button[@onclick='myAlertFunction()']")).click();
 
+        driver.findElement(By.xpath("//button[@onclick='myAlertFunction()']")).click();
         driver.switchTo().alert().accept();
 
         driver.findElement(By.xpath("//button[@onclick='myConfirmFunction()']")).click();
         driver.switchTo().alert().dismiss();
 
         driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']")).click();
-        driver.switchTo().alert().sendKeys("Name");
+        String name = "Name";
+        driver.switchTo().alert().sendKeys(name);
         driver.switchTo().alert().accept();
+        String actualMessage = driver.findElement(By.id("prompt-demo")).getText();
+        if(actualMessage.equals("You have entered '"+name+"' !")){
+            System.out.println("You have handled prompt correctly");
+            System.out.println(actualMessage);
+        }else{
+            System.out.println("You have handled prompt not correctly");
+        }
 
         driver.quit();
     }
