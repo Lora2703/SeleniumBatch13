@@ -18,6 +18,7 @@ click on each button and handle the alert accordingly*/
 
         driver.findElement(By.xpath("//button[@onclick='myConfirmFunction()']")).click();
         driver.switchTo().alert().dismiss();
+        System.out.println(driver.findElement(By.id("confirm-demo")).getText());
 
         driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']")).click();
         String name = "Name";
