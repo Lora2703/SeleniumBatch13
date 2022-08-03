@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class HW2 {
-    /*HW2
+    /*
 Go to ebay.com
 get all the categories and print them in the console
 select Computers/Tables & Networking
