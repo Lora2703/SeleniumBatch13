@@ -1,12 +1,10 @@
 package com.syntax.class10;
 
-import com.syntax.utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import sun.security.provider.NativePRNG;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
